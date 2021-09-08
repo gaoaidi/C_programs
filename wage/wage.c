@@ -4,7 +4,7 @@ int main()
 {
     int a=1,b=2;
     int c,temp,num;
-    // printf("Pleace input a number: ");
+    printf("Pleace input a number: ");
     scanf("%d",&c);
     if(c==0){
         printf("0\n");

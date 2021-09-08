@@ -1,20 +1,26 @@
 {
     "configurations": [
+        {
+            "name": "Launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": ["-arg1", "-arg2"],
+        }
         
-        
-    {
-        "name": "(lldb) Launch",
-        "type": "cppdbg",
-        "request": "launch",
-        "program": "${fileDirname}/${fileBasenameNoExtension}",
-        "args": [],
-        "stopAtEntry": false,
-        "cwd": "${workspaceFolder}",
-        "environment": [],
-        "externalConsole": true,    // 如果要调试有输入互动的程序，那么就要从外部控制台启动；vscode的集成控制台不支持输入；
-        "MIMode": "lldb",
-        "preLaunchTask": "clang build avtive file",
-    }
+    // {
+    //     "name": "(lldb) Launch",
+    //     "type": "cppdbg",
+    //     "request": "launch",
+    //     "program": "${fileDirname}/${fileBasenameNoExtension}",
+    //     "args": [],
+    //     "stopAtEntry": false,
+    //     "cwd": "${workspaceFolder}",
+    //     "environment": [],
+    //     "externalConsole": true,    // 如果要调试有输入互动的程序，那么就要从外部控制台启动；vscode的集成控制台不支持输入；
+    //     "MIMode": "lldb",
+    //     "preLaunchTask": "clang build avtive file",
+    // }
     ]
 }
 
