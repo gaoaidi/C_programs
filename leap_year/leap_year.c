@@ -6,11 +6,15 @@ int main()
     int months[13]={0,31,29,31,30,31,30,31,31,30,31,30,31};
     scanf("%d:%d:%d",&year,&month,&day);
     scanf("%d",&added_days);
-    if((year%4==0)||(year%100==0&&year%400==0)||(year%3200==0)){
+    if((year%4==0&&year%100!=0)||(year%400==0&&year%3200!=0)){
         day+=added_days;
         while(day>months[month]){
-            month+=1;
-            day=day-months[month];
+            if(month==12){
+                month=1;
+            }else{
+                month+=1;
+                day=day-months[month];
+            }
         }
         if(month<10){
             putchar('0');
